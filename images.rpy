@@ -1,5 +1,7 @@
-## 배경
-image bg room = "images/bg/background"
+image researcherRoom = "./images/bg/researcherRoom.jpg"
 
-## 캐릭터터
-image researcher = "images/char/researcher.jpg"
+transform fullscreen_bg:
+    zoom 1.0
+    xalign 0.5
+    yalign 0.5
+    fit "cover"

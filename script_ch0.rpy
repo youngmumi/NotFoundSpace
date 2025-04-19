@@ -1,6 +1,6 @@
 label ch0:
 
-    scene room
+    scene room at fullscreen_bg
 
     "(전화 벨이 울린다)"
 
@@ -8,7 +8,7 @@ label ch0:
 
     mainchar "휴일인데 갑자기 왜 그래?"
 
-    researcher "연구실로 와 봐!"
+    researcher "연구실로 와 줘."
 
     "당신은 선택을 할 수 있습니다.\n이 선택은 미래에 영향을 미칩니다."
 
@@ -23,7 +23,7 @@ label ch0:
     return
 
 label vacation_ending:
-    scene room
+    scene room at fullscreen_bg
 
     mainchar "미친놈. 나 바빠. 끊어."
 
@@ -36,7 +36,7 @@ label vacation_ending:
     return 
 
 label to_researcher:
-    scene researcherRoom
+    scene researcherRoom at fullscreen_bg
 
     show researcher
 
@@ -78,16 +78,20 @@ label to_researcher:
 
     menu:
         "미쳤어?":
+            researcher "너무하네."
             jump r_u_crazy
+
         "미친게 틀림 없군.":
+            researcher "너무한 거 아니야?"
             jump r_u_crazy
+
         "그러지 뭐.":
             jump test
 
     return
 
 label r_u_crazy:
-    scene researcherRoom
+    scene researcherRoom at fullscreen_bg
 
     show researcher   
 
@@ -99,7 +103,7 @@ label r_u_crazy:
 
     mainchar "어떤 의미에서?"
 
-    researcher "현장 요원이었다가 갑자기 시간물리학 연구직으로 바꾼 너의 화려한 경력 때문에?"
+    researcher "현장 요원이었다가 갑자기 연구직으로 바꾼 너의 화려한 경력 때문에?"
 
     mainchar "그건 부정할 순 없고."
 
@@ -110,8 +114,7 @@ label r_u_crazy:
     jump test
 
 label test:
-    scene researcherRoom
-
+    scene researcherRoom at fullscreen_bg
     show researcher   
 
     mainchar "이제 내가 뭘 해주면 되는 데?"
